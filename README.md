@@ -7,7 +7,7 @@ Nama   : Ikram Ramadhan
 Nim    : 312110478
 Matkul : Pengantar Pemograman
 ````
-## code bertahap menggunakan screenshoot
+## code dalam bentuk screenshoot
 ````shell
 
 nama = input("Masukkan nama: ")
@@ -41,38 +41,116 @@ print("Keterangan :", keterangan)
   ![img 1](asset/lat1code.png)
 * *
 
-## Praktek untuk mengenal variabel,masih menggunakan CMD
+## latihan 2
 ````shell
-Variabel dalam bahasa Python adalah wadah yang digunakan untuk menyimpan nilai atau data sementara dalam memori komputer. 
-stepnya;
-1. ketikan variabel contoh menggunakan a sebagai variabel maka tulis a = <nilai contoh 10>, b = <nilai contoh 13>.
-2. beri perintah print contoh print("variabel a=",a) a diluar tutup petik dua setelah koma adalah variabel yang telah
-menyimpan nilai
-3. lakukan hal yang sama untuk b
+gaji = int(input("Masukkan gaji: "))
+berkeluarga = (False, True)[input("Sudah berkeluarga? (Y/T): ") == "Y"]
+punya_rumah = (False, True)[input("Punya rumah? (Y/T): ") == "Y"]
+
+if gaji > 3000000:
+    print("Gaji sudah di atas UMR")
+
+    if berkeluarga:
+        print("Wajib ikutan asuransi dan menabung untuk pensiun")
+    else:
+        print("Tidak perlu ikutan asuransi")
+
+    if punya_rumah:
+        print("Wajib bayar pajak rumah")
+    else:
+        print("Tidak wajib bayar pajak rumah")
+
+else:
+    print("Gaji belum UMR")
+
 ````
 * *Hasil output program:*
-  ![img 1](asset/variabel.png)
+  ![img 1](asset/lat2code.png)
   * *
 
-## Mengenal IDLE python
+### latihan 3
 ````shell
-IDLE (Integrated Development and Learning Environment) adalah teks editor dan lingkungan pengembangan sederhana bawaan Python yang memudahkan penulisan, pengujian, dan menjalankan kode Python. 
-jika anda telah mendownload python biasanya otomatis sekaligus dengan IDLE 
-1. cari pada tab cari aplikasi di laptop anda.
+a = int(input("Masukkan bilangan A: "))
+b = int(input("Masukkan bilangan B: "))
+c = int(input("Masukkan bilangan C: "))
+
+if a + b == c or b + c == a or c + a == b:
+    print("BENAR")
+else:
+    print("SALAH")
+
 ````
 * *Hasil output progragim:*
-  ![img 1](asset/idle.png)
+  ![img 1](asset/lat3code.png)
   * *
 
+## latihan 3.1
 ````shell
-2. ketik kode pengenalan operasi dasar python seperti di contoh screenshoot
+print("=== Program Hitung Harga Tiket Bioskop ===")
+
+# Input tipe tiket
+tipe = input("Pilih tipe tiket (Reguler/VIP): ").lower()
+member = input("Apakah Anda memiliki kartu member? (Y/T): ").upper()
+
+# Tentukan harga berdasarkan tipe tiket
+if tipe == "reguler":
+    harga = 50000
+elif tipe == "vip":
+    harga = 100000
+else:
+    print("Tipe tiket tidak valid!")
+    exit()  # keluar dari program jika input salah
+
+# Cek apakah user memiliki kartu member
+if member == "Y":
+    diskon = 0.2 * harga
+else:
+    diskon = 0
+
+# Hitung total harga setelah diskon
+total = harga - diskon
+
+# Tampilkan hasil
+print("\n=== Rincian Pembayaran ===")
+print(f"Tipe Tiket     : {tipe.capitalize()}")
+print(f"Harga Tiket    : Rp{harga:,}")
+print(f"Diskon         : Rp{int(diskon):,}")
+print(f"Total Bayar    : Rp{int(total):,}")
+
 ````
 * *Hasil output progragim:*
-  ![img 1](asset/idle.png)
+  ![img 1](asset/lat3.1code.png.png)
   * *
+
+## latihan 3.2
 ````shell
-3. maka kita akan mendapatkan hasil seperti berikut
+print("=== Program Kalkulator Sederhana ===")
+
+# Input dari pengguna
+angka1 = float(input("Masukkan angka pertama: "))
+operator = input("Masukkan operator (+, -, *, /): ")
+angka2 = float(input("Masukkan angka kedua: "))
+
+# Proses perhitungan
+if operator == "+":
+    hasil = angka1 + angka2
+elif operator == "-":
+    hasil = angka1 - angka2
+elif operator == "*":
+    hasil = angka1 * angka2
+elif operator == "/":
+    if angka2 != 0:
+        hasil = angka1 / angka2
+    else:
+        hasil = "Error: Tidak bisa dibagi dengan nol!"
+else:
+    hasil = "Operator tidak dikenal!"
+
+# Output hasil
+print("\n=== Hasil Perhitungan ===")
+print(f"{angka1} {operator} {angka2} = {hasil}")
+
 ````
 * *Hasil output progragim:*
-  ![img 1](asset/hasil.png)
+  ![img 1](asset/lat3.2code.png)
   * *
