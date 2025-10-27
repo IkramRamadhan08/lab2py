@@ -38,7 +38,7 @@ print("\nNilai Huruf :", huruf)
 print("Keterangan :", keterangan)
 ````
 * *Hasil output program:*
-  ![img 1](asset/halloworld.png)
+  ![img 1](codefile/latihan1_pertemuan6.png)
 * *
 
 ## Praktek untuk mengenal variabel,masih menggunakan CMD
