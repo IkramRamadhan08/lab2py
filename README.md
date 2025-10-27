@@ -1,13 +1,14 @@
 # Pertemuan 6
 ## Tugas Pengantar Pemograman 
-Ini adalah pertemuan 3 dari ikram ramadhan dengan dosen pengampu bapak Agung Nugroho, S.Kom., M.Kom
+Ini adalah pertemuan 6 dari ikram ramadhan dengan dosen pengampu bapak Agung Nugroho, S.Kom., M.Kom
 
 ````shell
 Nama   : Ikram Ramadhan
 Nim    : 312110478
 Matkul : Pengantar Pemograman
 ````
-## code dalam bentuk screenshoot
+## code,flowchart dan output program pada materi 1
+### latihan 1
 ````shell
 
 nama = input("Masukkan nama: ")
@@ -41,7 +42,7 @@ print("Keterangan :", keterangan)
   ![img 1](asset/lat1code.png)
 * *
 
-## latihan 2
+### latihan 2
 ````shell
 gaji = int(input("Masukkan gaji: "))
 berkeluarga = (False, True)[input("Sudah berkeluarga? (Y/T): ") == "Y"]
@@ -154,3 +155,93 @@ print(f"{angka1} {operator} {angka2} = {hasil}")
 * *Hasil output progragim:*
   ![img 1](asset/lat3.2code.png)
   * *
+
+  ## code dan output program pada materi 2
+### latihan 1
+````shell
+# Program Menentukan Bilangan Terbesar dari 4 Bilangan
+print("=== Program Menentukan Bilangan Terbesar ===")
+
+# Input empat bilangan
+a = int(input("Masukkan bilangan pertama (a): "))
+b = int(input("Masukkan bilangan kedua (b): "))
+c = int(input("Masukkan bilangan ketiga (c): "))
+d = int(input("Masukkan bilangan keempat (d): "))
+
+# Menentukan bilangan terbesar menggunakan if bertingkat
+if a > b:
+    if a > c:
+        if a > d:
+            terbesar = a
+        else:
+            terbesar = d
+    else:
+        if c > d:
+            terbesar = c
+        else:
+            terbesar = d
+else:
+    if b > c:
+        if b > d:
+            terbesar = b
+        else:
+            terbesar = d
+    else:
+        if c > d:
+            terbesar = c
+        else:
+            terbesar = d
+
+# Output hasil
+print(f"Bilangan terbesar dari ({a}, {b}, {c}, {d}) adalah: {terbesar}")
+
+````
+* *Hasil output program:*
+  ![img 1](asset/penentu.png)
+* *
+
+### latihan 2
+````shell
+# Program sederhana mengurutkan 3 bilangan dari terkecil ke terbesar
+print("=== Program Pengurutan 3 Bilangan ===")
+
+# Input tiga bilangan
+a = int(input("Masukkan bilangan pertama (a): "))
+b = int(input("Masukkan bilangan kedua (b): "))
+c = int(input("Masukkan bilangan ketiga (c): "))
+
+# Proses pengurutan menggunakan if else
+if a <= b and a <= c:
+    if b <= c:
+        print("Urutan dari terkecil ke terbesar:", a, b, c)
+    else:
+        print("Urutan dari terkecil ke terbesar:", a, c, b)
+elif b <= a and b <= c:
+    if a <= c:
+        print("Urutan dari terkecil ke terbesar:", b, a, c)
+    else:
+        print("Urutan dari terkecil ke terbesar:", b, c, a)
+else:
+    if a <= b:
+        print("Urutan dari terkecil ke terbesar:", c, a, b)
+    else:
+        print("Urutan dari terkecil ke terbesar:", c, b, a)
+
+````
+* *Hasil output program:*
+  ![img 1](asset/urut2.png)
+* *
+
+### latihan 3
+````shell
+# Program nested for pola angka bertingkat
+print("=== Pola Nested For dari 0 sampai 18 ===")
+
+for i in range(10):          # baris
+    for j in range(10):      # kolom
+        print(i + j, end="\t")
+    print()  # pindah ke baris baru
+````
+* *Hasil output program:*
+  ![img 1](asset/tingkat    .png)
+* *
